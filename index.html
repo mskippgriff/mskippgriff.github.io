@@ -2,9 +2,9 @@
 <html lang="en" class="transition-colors duration-300 dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>griffAI – Custom Tools & Automations</title>
-  <meta name="description" content="Contracted AI software engineer building custom tools and automations for small businesses. Tell me what you need - I’ll create a working version quickly, refine it with you, and get it live on fixed build fees." />
+  <meta name="description" content="AI software engineer building custom tools and automations for small businesses. Tell me what you need — I’ll create a first version quickly, refine it with you, and get it live on fixed build fees." />
   <link rel="icon" href="image.png" />
 
   <script>
@@ -18,78 +18,92 @@
   <style>
     .fade-in { animation: fadeIn 0.5s ease-in; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Mobile polish */
+    @media (max-width: 640px) {
+      h1 { font-size: 2.25rem; }         /* ~text-4xl */
+      h2 { font-size: 1.5rem; }          /* ~text-2xl */
+      .mobile-tight { padding-left: 0.25rem; padding-right: 0.25rem; }
+      .mobile-gap { margin-bottom: 3rem; } /* smaller section gaps on phone */
+    }
   </style>
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans antialiased">
-  <div class="max-w-4xl mx-auto px-6 py-12">
+  <!-- Small circular theme toggle (better on phones) -->
+  <button
+    id="toggle-theme"
+    class="fixed top-3 right-3 z-50 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200
+           w-9 h-9 flex items-center justify-center rounded-full shadow-md transition"
+    aria-label="Toggle theme"
+  >
+    <span id="toggle-text">☀️</span>
+  </button>
+
+  <div class="max-w-4xl mx-auto px-6 py-12 mobile-tight">
 
     <!-- Header -->
-    <header class="text-center mb-16 relative">
+    <header class="text-center mb-16 sm:mb-20 relative">
       <h1 class="text-5xl font-extrabold tracking-tight mb-4">
         griff<span class="text-red-600 dark:text-red-400">AI</span>
       </h1>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        Contracted AI software engineer. I build <span class="font-semibold">custom tools & automations</span> for small businesses -
-        simple systems that actually get things done.
+        AI Software Engineer. I build <span class="font-semibold">custom tools & automations</span> for small businesses — simple systems that actually get things done.
       </p>
       <p class="mt-3 text-base text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-        Tell me what you need and I’ll create a first version quickly, keep improving it with your feedback, and then get it live - all on <span class="font-semibold">fixed build fees</span>.
+        Tell me what you need and I’ll create a first version quickly, keep improving it with your feedback, and then get it live — all on <span class="font-semibold">fixed build fees</span>.
       </p>
-      <button
-        id="toggle-theme"
-        class="absolute top-4 right-4 flex items-center space-x-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full"
-      >
-        <span id="toggle-text" class="text-sm font-medium">Light Mode</span>
-      </button>
     </header>
 
     <!-- About -->
-    <section class="mb-20 fade-in">
+    <section class="mb-12 sm:mb-20 fade-in">
       <h2 class="text-3xl font-bold tracking-tight mb-4 text-gray-900 dark:text-gray-100">About</h2>
       <div class="flex flex-col md:flex-row items-center gap-6">
         <img src="head-shot.jpg" alt="Max Griffiths headshot"
              class="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-2 border-red-500 shadow" />
         <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-          I’m <span class="font-semibold">Max Griffiths</span> - PhD researcher and contracted AI software engineer.
-          I design and build practical systems that save people time: website chat assistants that answer questions and take bookings,
-          email tools that organise and draft replies, and AI agents that find new business leads or create and post engaging marketing content.
+          I’m <span class="font-semibold">Max Griffiths</span> – PhD researcher and AI software engineer.
+          I design and build practical systems that save people time:
+          <span class="font-semibold">AI agents that find new business leads or create and post engaging marketing content</span>,
+          website chat assistants that answer questions and take bookings,
+          email tools that organise and draft replies,
+          and background automations that keep marketing and reporting ticking over without effort.
         </p>
       </div>
     </section>
 
     <!-- What I Build -->
-    <section class="mb-20 fade-in">
+    <section class="mb-12 sm:mb-20 fade-in">
       <h2 class="text-3xl font-bold tracking-tight mb-4 text-gray-900 dark:text-gray-100">What I Build</h2>
       <ul class="list-disc list-inside text-lg leading-loose text-gray-600 dark:text-gray-400">
-        <li><span class="font-semibold">Customer Support Chatbot</span> - website/live chat that answers FAQs, captures leads, and books appointments.</li>
-        <li><span class="font-semibold">Automated Social Content & Scheduling</span> — weekly posts, captions, and hashtags sent to Instagram, Facebook, LinkedIn.</li>
-        <li><span class="font-semibold">Email Follow-Ups & Marketing</span> - personalised messages for offers, cart recovery, reminders, and reviews.</li>
-        <li><span class="font-semibold">Reporting & Insights Dashboard</span> - pulls sales, website, and booking data into one page with plain-English summaries.</li>
+        <li><span class="font-semibold">Customer Support Chat Assistant</span> — answers FAQs, captures leads, and takes bookings on your site.</li>
+        <li><span class="font-semibold">Automated Social Content</span> — creates and schedules weekly posts to Instagram, Facebook, and LinkedIn.</li>
+        <li><span class="font-semibold">Email Follow-ups & Marketing</span> — personalised offers, cart recovery, reminders, and review requests.</li>
+        <li><span class="font-semibold">Reporting & Insights</span> — pulls sales, website, and booking data into one page with clear summaries and actions.</li>
       </ul>
+
       <p class="mt-6 text-lg font-medium text-gray-700 dark:text-gray-300">
-        Not seeing what you’re after? I can build almost anything. Just tell me the problem, and I’ll put together a working version quickly, refine it with you, and get it running live.
+        Don’t see your idea here? Tell me the problem and I’ll build a working version quickly, refine it with you, and get it running live.
       </p>
     </section>
 
     <!-- Experience -->
-    <section class="mb-20 fade-in">
+    <section class="mb-12 sm:mb-20 fade-in">
       <h2 class="text-3xl font-bold tracking-tight mb-6 text-gray-900 dark:text-gray-100">Experience</h2>
       <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-        I’ve worked on a wide range of projects and built tools for both clients and research -
-        from marketing assistants and email systems to dashboards and booking software.
+        I’ve worked on a wide range of projects for clients and research — from lead-generating agents and email systems to dashboards and booking software.
         Each build is straightforward to use, reliable to run, and focused on real results.
       </p>
     </section>
 
     <!-- Contact -->
-    <section class="mb-20 fade-in text-center">
+    <section class="mb-12 sm:mb-20 fade-in text-center">
       <h2 class="text-3xl font-bold tracking-tight mb-6 text-gray-900 dark:text-gray-100">Let’s Talk</h2>
       <a href="mailto:griffai@outlook.com"
          class="inline-block bg-red-600 hover:bg-red-500 text-white px-6 py-2 rounded-full text-lg transition shadow mb-4">
         Email me what you’d like built →
       </a>
-      <div class="flex justify-center gap-6 text-sm mt-6">
+      <div class="flex flex-wrap justify-center gap-6 text-sm mt-6">
         <a href="https://www.linkedin.com/in/max-griffiths-3681631b4/" target="_blank"
            class="hover:underline text-gray-500 dark:text-gray-400">LinkedIn</a>
         <a href="https://github.com/MaxSkippGriff" target="_blank"
@@ -105,32 +119,27 @@
     </footer>
   </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById("toggle-theme");
-    const toggleText = document.getElementById("toggle-text");
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById("toggle-theme");
+      const toggleText = document.getElementById("toggle-text");
 
-    const applyTheme = () => {
-      const savedTheme = localStorage.getItem("theme");
-      const useDark = savedTheme !== "light"; // Dark mode by default
-      if (useDark) {
-        document.documentElement.classList.add("dark");
-        toggleText.textContent = "Light Mode";
-      } else {
-        document.documentElement.classList.remove("dark");
-        toggleText.textContent = "Dark Mode";
-      }
-    };
+      const applyTheme = () => {
+        const saved = localStorage.getItem("theme");
+        const useDark = saved !== "light"; // dark by default
+        document.documentElement.classList.toggle("dark", useDark);
+        toggleText.textContent = useDark ? "☀️" : "🌙";
+      };
 
-    toggleButton.addEventListener("click", () => {
-      const isDark = document.documentElement.classList.toggle("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-      toggleText.textContent = isDark ? "Light Mode" : "Dark Mode";
+      toggleButton.addEventListener("click", () => {
+        const isDark = !document.documentElement.classList.contains("dark");
+        document.documentElement.classList.toggle("dark", isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        toggleText.textContent = isDark ? "☀️" : "🌙";
+      });
+
+      applyTheme();
     });
-
-    applyTheme();
-  });
-</script>
-
+  </script>
 </body>
 </html>
